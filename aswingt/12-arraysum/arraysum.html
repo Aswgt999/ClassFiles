@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Elements
+    </title>
+    <script>
+        function start(){
+            var size = document.getElementById("size").value;
+            var a = [];
+            for(var i = 0; i < size; i++){
+                x = inputNum();
+                console.log(x);
+                a[i] = parseInt(x);
+            }
+            var sum = 0;
+            for(var i = 0; i < size; i++){
+                sum = sum + a[i];
+            }
+            alert("The sum is " + sum);
+        }
+
+        function inputNum(){
+            var x = prompt("Enter no", "0");
+            return x;
+        }
+    </script>
+</head>
+<body>
+    Size of array: <input type="text" id="size"><br>
+    <button type="button" onclick="start()">Start</button>
+</body>
+</html>

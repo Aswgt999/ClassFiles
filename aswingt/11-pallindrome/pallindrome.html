@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pallindrome</title>
+    <script>
+        function checkPallindrome(){
+            var str = document.getElementById('str').value;
+            var rstr = reverseString(str);
+            var check = str.localeCompare(rstr);
+            if (check == 0)
+                alert("Pallindrome");
+            else
+                alert("Not Pallindrome");
+        }
+
+        function reverseString(str){
+            return str.split("").reverse().join("");
+        }
+    </script>
+</head>
+<body>
+    String: <input type="text" name="str" id="str">
+    <button type="button" onclick="checkPallindrome()">Check</button>
+</body>
+</html>

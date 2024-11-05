@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nth Prime Number</title>
+</head>
+<center>
+<body>
+
+    <h1>Find the Nth Prime Number</h1>
+    Enter input: <input type="text" id="nValue" />
+    <button onclick="find()">Find Prime</button><br>
+    <p>The nth prime:-</p>
+    <p id="result"></p>
+
+    <script>
+        function find(){
+            var n = document.getElementById('nValue').value;
+            var count = 0;
+            var num = 1;
+            while(count < n){
+                num++;
+                if(prime(num)){
+                    count++;
+                }
+            }
+            document.getElementById('result').innerHTML = num;
+        }
+
+        function prime(p){
+            if (p <= 1)
+                return false;
+            for(let i = 2; i <= Math.sqrt(p); i++){
+                if(p % i === 0){
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+
+</body>
+</center>
+</html>

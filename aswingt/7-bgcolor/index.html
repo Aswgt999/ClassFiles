@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change bgcolor</title>
+    <script>
+        var colors = ['red', 'green', 'blue', 'white'];
+        function change(color){
+            switch(color){
+                case 'red':
+                    document.body.style.backgroundColor = colors[0];
+                    break;
+                case 'green':
+                    document.body.style.backgroundColor = colors[1];
+                    break;
+                case 'blue':
+                    document.body.style.backgroundColor = colors[2];
+                    break;
+                default:
+                    document.body.style.backgroundColor = colors[3];
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="change('red')">Red</button>
+    <button onclick="change('green')">Green</button>
+    <button onclick="change('blue')">Blue</button>
+    <button onclick="change()">White</button>
+</body>
+</html>

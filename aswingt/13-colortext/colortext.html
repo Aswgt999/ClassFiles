@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Color</title>
+    <script>
+        function change(){
+            var x = document.getElementById("txt");
+            x.style.color = "white";
+            x.style.backgroundColor = "black";
+        }
+
+        function changeBack(){
+            var x = document.getElementById('txt');
+            x.style.color = "black";
+            x.style.backgroundColor = "white";
+        }
+    </script>
+</head>
+<body>
+    Text: <input type="text" name="txt" id="txt" onfocus="change()" onblur="changeBack()">
+</body>
+</html>

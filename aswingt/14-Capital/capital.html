@@ -1,0 +1,45 @@
+<!-- create an html file with select box filled with countries -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Capital</title>
+    <script>
+        function cap(){
+            var country = document.getElementById("country").value;
+            switch(country){
+                case "Afghanistan":
+                    document.getElementById("capital").value = "Kabul";
+                    break;
+                case "Albania":
+                    document.getElementById("capital").value = "Tirana";
+                    break;
+                case "Algeria":
+                    document.getElementById("capital").value = "Algiers";
+                    break;
+                case "Andorra":
+                    document.getElementById("capital").value = "Andorra la Vella";
+                    break;
+                case "Angola":
+                    document.getElementById("capital").value = "Luanda";
+                    break;
+                default:
+                    alert("No response");
+            }
+        }
+    </script>
+ </head>
+ <body>
+    Country: <select name="country" id="country" onchange="cap()">
+        <!--5 options with country names-->
+        <option value="Afghanistan" selected>Afghanistan</option>
+        <option value="Albania">Albania</option>
+        <option value="Algeria">Algeria</option>
+        <option value="Andorra">Andorra</option>
+        <option value="Angola">Angola</option>
+    </select>
+    <br><br>
+    Capital: <input type="text" id="capital" value="Kabul">
+ </body>
+ </html>

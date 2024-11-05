@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+    <script>
+        function multi(){
+            var n = document.getElementById('num').value;
+            var l = document.getElementById('limit').value;
+            var result = 0;
+            const table = document.getElementById('mult');
+            
+            for(var i = 1; i <= l; i++){
+                const newRow = table.insertRow();
+                result = n * i;
+                const newCell1 = newRow.insertCell();
+                const cell1Text = document.createTextNode(n + '*' + i + "=");
+                newCell1.appendChild(cell1Text);
+                const newCell2 = newRow.insertCell();
+                const cell2Text = document.createTextNode(result);
+                newCell2.appendChild(cell2Text);
+                console.log(n+"*"+i+"="+result);
+            }
+        }
+    </script>
+</head>
+<body>
+    Enter no :<input type="text" id="num"><br>
+    Enter limit :<input type="text" id="limit"><br>
+    <button onclick="multi()">Find</button>
+    <table id="mult">
+
+    </table>
+</body>
+</html>

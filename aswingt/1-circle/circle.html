@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Circle</title>
+    <script>
+        function calculate(){
+            var r = parseFloat(document.getElementById("radius").value);
+            var a = 3.14 * r * r;
+            document.getElementById("area").innerHTML = a;
+            var c = 2 * 3.14 * r;
+            document.getElementById("circumference").innerHTML = c;
+        }
+
+        // function circumference(){
+        //     var r = parseFloat(document.getElementById("radius").value);
+            
+        // }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Radius:</td>
+            <td colspan="2"><input type="text" id="radius"></td>
+        </tr>
+        <tr>
+            <td>Circumference:</td>
+            <td id="circumference"></td>
+            <!-- <td><input type="button" onclick="circumference()" value="calculate"></td> -->
+        </tr>
+        <tr>
+            <td>Area:</td>
+            <td id="area"></td>
+            <!-- <td><input type="button" onclick="area()" value="calculate"></td> -->
+        </tr>
+        <tr>
+            <td align="center" colspan="2"><input type="button" value="calculate" onclick="calculate()"></td>
+        </tr>
+    </table>
+</body>
+</html>
