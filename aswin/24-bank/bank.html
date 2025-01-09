@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Transaction</title>
+</head>
+<body>
+    <center>
+    <h1>Bank Transaction Form</h1>
+    <form action="bank.php" method="POST">
+        <label for="accno">Account Number:</label><br>
+        <input type="text" id="accno" name="accno" required><br><br>
+
+        <label for="amount">Amount:</label><br>
+        <input type="text" id="amount" name="amt" required><br><br>
+
+        <label>Transaction Type:</label><br>
+        <input type="radio" id="deposit" name="type" value="Deposit" required>
+        <label for="deposit">Deposit</label>
+        <input type="radio" id="withdrawal" name="type" value="Withdrawal" required>
+        <label for="withdrawal">Withdrawal</label><br><br>
+
+        <input type="submit" value="Submit Transaction">
+    </form>
+    </center>
+</body>
+</html>

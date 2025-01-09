@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+</head>
+<body>
+    <form action="itempost.php" method="post">
+        <h1>Enter Item</h1>
+        <table>
+            <tr>
+                <td>Item Code:</td>
+                <td><input type="text" name="item_code"></td>
+            </tr>
+            <tr>
+                <td>Item Name:</td>
+                <td><input type="text" name="item_name"></td>
+            </tr>
+            <tr>
+                <td>Item Price:</td>
+                <td><input type="text" name="unit_price"></td>
+            </tr>
+            <tr>
+                <td><button type="submit">Submit</button></td>
+            </tr>
+        </table>
+    </form>
+    <form action="viewitem.php">
+        <button type="submit">View Items</button>
+    </form>
+</body>
+</html>
